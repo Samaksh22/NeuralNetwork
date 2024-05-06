@@ -48,4 +48,8 @@ public:
 
         return (weights.transpose() * output_gradient);
     }
+    
+
+    ~DenseLayer() {}
+
 };

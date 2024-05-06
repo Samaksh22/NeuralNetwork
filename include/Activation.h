@@ -49,4 +49,7 @@ public:
         mat z = (output_gradient.cwiseProduct(primed_inp));
         return z;
     }
+
+
+    ~ActivationLayer() {}
 };
