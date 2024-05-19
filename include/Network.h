@@ -53,7 +53,7 @@ public:
     Network():layers({1}){}
     Network(vector<int> layers):layers(layers) {}
 
-    void train(mat X, mat Y, int epochs = 1000, double learn_rate = 0.01)
+    void train(mat X, mat Y, int epochs = 1000, double learn_rate = 0.01, int show_at_iteration = 100)
     {
         makeNetwork();
         for (int i = 0; i <= epochs; i++)
@@ -72,7 +72,7 @@ public:
 
             error /= X.size();
 
-            if (i % 200 == 0)
+            if (i % show_at_iteration == 0)
                 cout << "Epoch: " << i << "  Error: " << error << endl;
         }
     }
